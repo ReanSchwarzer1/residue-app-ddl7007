@@ -1,1 +1,11 @@
-if(!self.define){let e,n={};const s=(s,i)=>(s=new URL(s+".js",i).href,n[s]||new Promise(n=>{if("document"in self){const e=document.createElement("script");e.src=s,e.onload=n,document.head.appendChild(e)}else e=s,importScripts(s),n()}).then(()=>{let e=n[s];if(!e)throw new Error(`Module ${s} didn’t register its module`);return e}));self.define=(i,t)=>{const o=e||("document"in self?document.currentScript.src:"")||location.href;if(n[o])return;let c={};const r=e=>s(e,o),f={module:{uri:o},exports:c,require:r};n[o]=Promise.all(i.map(e=>f[e]||r(e))).then(e=>(t(...e),c))}}define(["./workbox-1d305bb8"],function(e){"use strict";self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"registerSW.js",revision:"1872c500de691dce40960bb85481de07"},{url:"index.html",revision:"f67fe3517d8cd174a940a9704933944b"},{url:"icon-512.png",revision:"fa604b14ad45c711fc7bd01429775f52"},{url:"icon-192.png",revision:"5171cf67545fa10551a3679517055170"},{url:"assets/index-CCQ1uCnl.js",revision:null},{url:"icon-192.png",revision:"5171cf67545fa10551a3679517055170"},{url:"icon-512.png",revision:"fa604b14ad45c711fc7bd01429775f52"},{url:"manifest.webmanifest",revision:"3a3f8701fd90a50477f3b075f90332c2"}],{}),e.cleanupOutdatedCaches(),e.registerRoute(new e.NavigationRoute(e.createHandlerBoundToURL("index.html"))),e.registerRoute(/^https:\/\/fonts\.googleapis\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-cache",plugins:[new e.ExpirationPlugin({maxEntries:10,maxAgeSeconds:31536e3}),new e.CacheableResponsePlugin({statuses:[0,200]})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.gstatic\.com\/.*/i,new e.CacheFirst({cacheName:"gstatic-fonts-cache",plugins:[new e.ExpirationPlugin({maxEntries:10,maxAgeSeconds:31536e3}),new e.CacheableResponsePlugin({statuses:[0,200]})]}),"GET")});
+self.addEventListener('install', () => {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', async () => {
+  const cacheNames = await caches.keys();
+  await Promise.all(cacheNames.map(name => caches.delete(name)));
+  await self.clients.claim();
+  const clients = await self.clients.matchAll({ type: 'window' });
+  clients.forEach(client => client.navigate(client.url));
+});

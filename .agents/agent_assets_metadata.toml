@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Dpe6MPfIu79eUM1V_IZv_"
+uri = "file://public/images/viewfinder.png"
+type = "image"
+title = "black card with hole"
+
+[[generated]]
+id = "yEskGkV6SyybIb12C8nE7"
+uri = "file://public/images/map.png"
+type = "image"
+title = "dark metro map with pins"

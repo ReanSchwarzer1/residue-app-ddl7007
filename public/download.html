@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residue — Download Files</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #080808;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 560px;
+      width: 100%;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .subtitle {
+      color: #c8923a;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .file-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .file-name {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .file-desc {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 3px;
+      letter-spacing: 0.05em;
+    }
+    .dl-btn {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid rgba(200,146,58,0.5);
+      color: #c8923a;
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      white-space: nowrap;
+      margin-left: 16px;
+      flex-shrink: 0;
+    }
+    .dl-btn:hover {
+      background: rgba(200,146,58,0.1);
+      border-color: #c8923a;
+    }
+    .note {
+      margin-top: 40px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.8;
+    }
+    .note strong {
+      color: rgba(255,255,255,0.55);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Residue</h1>
+    <p class="subtitle">DDL 7007 — Download Files</p>
+
+    <div class="section">
+      <div class="section-title">Video Backgrounds</div>
+      <div class="file-row">
+        <div>
+          <div class="file-name">metro-crowd.mp4</div>
+          <div class="file-desc">Scene 1 background — metro crowd footage</div>
+        </div>
+        <a class="dl-btn" href="/videos/metro-crowd.mp4" download>Download</a>
+      </div>
+      <div class="file-row">
+        <div>
+          <div class="file-name">subway-tunnel.mp4</div>
+          <div class="file-desc">Scene 2 background — subway tunnel footage</div>
+        </div>
+        <a class="dl-btn" href="/videos/subway-tunnel.mp4" download>Download</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Images</div>
+      <div class="file-row">
+        <div>
+          <div class="file-name">viewfinder.png</div>
+          <div class="file-desc">The isolation viewfinder prop image</div>
+        </div>
+        <a class="dl-btn" href="/images/viewfinder.png" download>Download</a>
+      </div>
+      <div class="file-row">
+        <div>
+          <div class="file-name">map.png</div>
+          <div class="file-desc">Metro map — the shared signal map</div>
+        </div>
+        <a class="dl-btn" href="/images/map.png" download>Download</a>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>To download the full animated video</strong> — go back to the main page and click the <strong>EXPORT VIDEO</strong> button at the bottom. Select your current tab when prompted and it will record and download the full 22-second loop automatically.
+    </div>
+  </div>
+</body>
+</html>
